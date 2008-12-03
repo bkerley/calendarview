@@ -353,6 +353,10 @@ Calendar.prototype = {
             else
               rowHasDays = true
 
+            // Add a class for the specific date
+            if (isCurrentMonth)
+              cell.addClassName('day'+date.getFullYear()+(date.getMonth() + 1)+date.getDate());
+
             // Ensure the current day is selected
             if (isCurrentMonth && day == dayOfMonth) {
               cell.addClassName('selected')
